@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday@1.8.0/css/pikaday.css">
+    <script src="https://cdn.jsdelivr.net/npm/pikaday@1.8.0/pikaday.min.js"></script>
+
+    <script src="../component/datepicker/datepicker-component.js"></script>
+
+    <title>datepicker</title>
+</head>
+<body>
+<div id="datepicker">
+    开始时间：<datepicker v-model="beginDate" init></datepicker>
+    ~
+    结束时间：<datepicker v-model="endDate"></datepicker>
+</div>
+<script type="application/javascript">
+    new Vue({
+        el: "#datepicker",
+        data: {
+            beginDate: '',
+            endDate: ''
+        }
+    });
+</script>
+</body>
+</html>
